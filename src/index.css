@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer utilities {
+  .container {
+    @apply mx-auto px-5;
+  }
+}
+@layer base {
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+}
