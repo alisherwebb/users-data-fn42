@@ -20,7 +20,7 @@ function Home() {
     );
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1e293b] to-[#0f172a] text-white p-6">
+    <div className="min-h-screen text-white p-6">
       <h1 className="flex justify-center text-3xl md:text-4xl font-bold mb-8 tracking-wide">
          Foydalanuvchilar:
       </h1>
@@ -32,8 +32,7 @@ function Home() {
               <Link
                 to={"/about/" + obj.id}
                 className="block bg-[#212842] hover:bg-[#2b3559] transition-colors duration-300 
-                           shadow-md hover:shadow-xl rounded-xl px-5 py-4 
-                           text-lg font-medium tracking-wide text-[#f0e7d5]"
+                           shadow-md"
               >
                 {obj.name}
               </Link>
