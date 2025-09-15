@@ -32,7 +32,8 @@ function Home() {
               <Link
                 to={"/about/" + obj.id}
                 className="block bg-[#212842] hover:bg-[#2b3559] transition-colors duration-300 
-                           shadow-md"
+                           shadow-md hover:shadow-xl rounded-xl px-5 py-4 
+                           text-lg font-medium tracking-wide text-[#f0e7d5]"
               >
                 {obj.name}
               </Link>
