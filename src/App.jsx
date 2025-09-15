@@ -15,7 +15,7 @@ function App() {
           index: true,
           element: <Home />,
         },
-        {
+        { 
           path: "/about/:id",
           element: <About />,
         },
