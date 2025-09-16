@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useGetData from "../hooks/useGetData";
 
 function About() {
@@ -28,37 +28,42 @@ function About() {
 
   return (
     <div className="container mx-auto px-4">
+      <Link className="bg-red-600 px-3 rounded-md py-1 ml-[400px] active:bg-red-300"  to={"/"}>
+        <button>Back</button>
+      </Link>
       <div
-        className="max-w-2xl mt-20 mx-auto p-10 rounded-2xl
-        bg-[#212842] border border-white/10 shadow-2xl"
+        className="max-w-2xl mt-9 mx-auto p-10 rounded-2xl
+        bg-[#212842] shadow-2xl"
       >
+        
         <h1 className="text-4xl font-bold mb-8 text-center">
-          User ma’lumotlari
+          {data.name}ning ma’lumotlari
         </h1>
 
         <div className="space-y-5 text-lg text-gray-200">
           <p>
-            <span className="font-semibold text-[#e3c39d]">Name:</span>{" "}
+            <span className="font-semibold text-[#e3c39d] mr-5">Name:</span>
             {data.name}
           </p>
           <p>
-            <span className="font-semibold text-[#e3c39d]">Username:</span>{" "}
+            <span className="font-semibold text-[#e3c39d] mr-5">Username:</span>
             {data.username}
           </p>
           <p>
-            <span className="font-semibold text-[#e3c39d]">Email:</span>{" "}
+            <span className="font-semibold text-[#e3c39d] mr-5">Email:</span>
             {data.email}
           </p>
           <p>
-            <span className="font-semibold text-[#e3c39d]">Phone:</span>{" "}
+            <span className="font-semibold text-[#e3c39d] mr-5">Phone:</span>
             {data.phone}
           </p>
           <p>
-            <span className="font-semibold text-[#e3c39d]">Website:</span>{" "}
+            <span className="font-semibold text-[#e3c39d] mr-5">Website:</span>
             {data.website}
           </p>
         </div>
       </div>
+      
     </div>
   );
 }
