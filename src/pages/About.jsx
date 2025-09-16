@@ -27,17 +27,11 @@ function About() {
     );
 
   return (
-    <div className="container mx-auto px-4">
-      <Link className="bg-red-600 px-3 rounded-md py-1 ml-[400px] active:bg-red-300"  to={"/"}>
-        <button>Back</button>
-      </Link>
-      <div
-        className="max-w-2xl mt-9 mx-auto p-10 rounded-2xl
-        bg-[#212842] shadow-2xl"
-      >
-        
-        <h1 className="text-4xl font-bold mb-8 text-center">
-          {data.name}ning ma’lumotlari
+    <div className="container mx-auto px-4 sm:mb-[50px]">
+      <div className="max-w-2xl mt-20 mx-auto p-10 rounded-2xl bg-[#212842] shadow-2xl">
+        <h1 className="text-4xl font-bold text-gray-400 mb-8 text-center">
+          {data.name}
+          <span className="text-white">ning ma’lumotlari</span>
         </h1>
 
         <div className="space-y-5 text-lg text-gray-200">
@@ -62,8 +56,15 @@ function About() {
             {data.website}
           </p>
         </div>
+        <div className="flex justify-end mt-8">
+          <Link
+            to={"/"}
+            className="bg-red-600 border border-white px-4 py-2 rounded-md active:bg-red-300"
+          >
+            <button className="font-bold">Back</button>
+          </Link>
+        </div>
       </div>
-      
     </div>
   );
 }
